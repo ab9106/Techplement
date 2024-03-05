@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="buy.css">
+    <title>Secure Payment</title>
+</head>
+<body>
+
+    <div class="payment-container">
+        <div class="payment-header">Secure Payment</div>
+        <form class="payment-form" id="paymentForm">
+            <label for="cardNumber">Card Number</label>
+            <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+
+            <label for="expiryDate">Expiry Date</label>
+            <input type="text" id="expiryDate" placeholder="MM/YYYY" required>
+
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" placeholder="123" required>
+
+            <label for="paymentMethod">Payment Method</label>
+            <select id="paymentMethod" required>
+                <option value="creditCard">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="applePay">Apple Pay</option>
+                <option value="googlePay">Google Pay</option>
+            </select>
+
+            <button type="button" class="payment-button" onclick="simulatePayment()">
+                <span id="paymentButtonText">Pay Now</span>
+                <div class="loader" id="loader"></div>
+            </button>
+        </form>
+        <div id="paymentResult"></div>
+    </div>
+
+    <script src="buy.js"></script>
+</body>
+</html>
+
